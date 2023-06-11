@@ -3,6 +3,7 @@ import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 import { IoLogoGithub, IoHome, IoBook } from 'react-icons/io5'
 import { TbGhost } from 'react-icons/tb'
+import { FaCog } from 'react-icons/fa'
 import ThemeToggleButton from './ThemeToggleButton'
 ---
 
@@ -20,6 +21,7 @@ import ThemeToggleButton from './ThemeToggleButton'
       <div class="items-center gap-6 font-spaceMono hidden md:flex">
         <HeaderLink href="/"><IoHome />Home</HeaderLink>
         <HeaderLink href="/blog"><IoBook />Blog</HeaderLink>
+        <HeaderLink href="/gear"><FaCog />Gear</HeaderLink>
         <HeaderLink
           href="https://github.com/chris-chen-creates"
           target="_blank"
