@@ -1,27 +1,34 @@
 ---
 import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
+import { IoLogoGithub, IoHome, IoBook } from 'react-icons/io5'
+import { TbGhost } from 'react-icons/tb'
+import ThemeToggleButton from './ThemeToggleButton'
 ---
 
-<header class="fixed w-full pq2 z-20 backdrop-blur-md">
+<header class="fixed w-full p-2 z-20 backdrop-blur-md">
   <div class="mx-auto max-w-3xl">
-    <nav class="flex items-center gap-3 text-base">
-      <h2 class="font-semibold tracking-tighter p-2 font-spaceMono text-lg">
-        {SITE_TITLE}
-      </h2>
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="https://github.com/withastro/astro" target="_blank">
-        GitHub
-      </HeaderLink>
+    <nav class="flex items-center gap-3 text-xl">
+      <a href="/" class="text-3xl dark:text-purple-500 text-purple-800">
+        <TbGhost />
+      </a>
+      <a href="/" class="group">
+        <h2 class="font-bold tracking-tighter p-2 font-spaceMono text-3xl">
+          {SITE_TITLE}
+        </h2>
+      </a>
+      <div class="items-center gap-6 font-spaceMono hidden md:flex">
+        <HeaderLink href="/"><IoHome />Home</HeaderLink>
+        <HeaderLink href="/blog"><IoBook />Blog</HeaderLink>
+        <HeaderLink
+          href="https://github.com/chris-chen-creates"
+          target="_blank"
+        >
+          <IoLogoGithub />Github
+        </HeaderLink>
+      </div>
+      <div class="flex-1"></div>
+      <ThemeToggleButton client:load />
     </nav>
   </div>
 </header>
-<style>
-  header {
-    margin: 0em 0 2em;
-  }
-  h2 {
-    margin: 0.5em 0;
-  }
-</style>
