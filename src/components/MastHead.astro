@@ -2,11 +2,23 @@
 import { Image } from '@astrojs/image/components'
 ---
 
-<section class="relative mb-6 h-80 flex justify-center items-center"></section>
-<div class="absolute w-full h-full overflow-hidden">
-  <img src="../assets/" width={720 * 2} />
-</div>
-<div class="z-10 text-center px-8 drop-shadow-lg shadow-black">
-  <div class="uppercase text-md mb-4">Welcome</div>
-  <div class="text-4xl font-spaceMono font-medium">Web Traveler 🚀</div>
-</div>
+<section class="relative mb-6 h-80 flex justify-center items-center">
+  <div class="absolute w-full h-full overflow-hidden">
+    <video
+      class="absolute inset-0 min-w-full min-h-full object-cover"
+      autoplay="autoplay"
+      muted="muted"
+      loop="loop"
+      playsinline><source src="/stars.webm" type="video/webm" /></video
+    >
+  </div>
+  <div
+    class="z-10 text-center px-8 drop-shadow-lg shadow-black text-white dark:text-zinc-100"
+  >
+    <div class="uppercase text-md mb-4">Welcome</div>
+    <div class="text-4xl font-spaceMono font-medium">Web Traveler 🚀</div>
+    <div class="text-4xl font-spaceMono font-medium">
+      You've reached my little space on the web
+    </div>
+  </div>
+</section>
