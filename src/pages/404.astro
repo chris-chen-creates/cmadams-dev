@@ -1,0 +1,37 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+import Body from '../components/Body.astro'
+import Content from '../components/Content.astro'
+import { IoChevronForward } from 'react-icons/io5/index.js'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[56px]">
+      <Content>
+        <section>
+          <h1 class="text-5xl text-center font-spaceMono mt-12">404 😅</h1>
+          <h1 class="text-3xl text-center font-spaceMono mt-4 mb-8">
+            Uh Oh! You're somewhere in the abyss!
+          </h1>
+          <div class="text-center py-4">
+            <a
+              class="inline-flex items-center gap-1 underline underline-offset-2 decoration-amber-500"
+              href="/"
+              >Let's get out of here! <IoChevronForward />
+            </a>
+          </div>
+        </section>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>
