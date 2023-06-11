@@ -6,6 +6,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import MastHead from '../components/MastHead.astro'
+
+const posts = (await Astro.glob('./posts/*.md')).sort(
+  (a: any, b: any) =>
+    new Date(b.frontmatter.createdAt).valueOf() -
+    new Date(a.frontmatter.createdAt).valueOf()
+)
 ---
 
 <!DOCTYPE html>
@@ -24,6 +30,17 @@ import MastHead from '../components/MastHead.astro'
             This is the spot where I can talk about myself a little bit and add
             a bio.
           </p>
+        </section>
+        <section>
+          <ul>
+            {
+              posts.map(post => (
+                <li>
+                  <a>{post.frontmatter.title}</a>
+                </li>
+              ))
+            }
+          </ul>
         </section>
       </Content>
     </main>
