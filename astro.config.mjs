@@ -8,15 +8,7 @@ import addClasses from 'rehype-add-classes'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.cmadams.dev/',
-  integrations: [
-    sitemap(),
-    react(),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp'
-    }),
-    ,
-    tailwind()
-  ],
+  integrations: [sitemap(), react(), image(), , tailwind()],
   markdown: {
     extendDefaultPlugins: true,
     rehypePlugins: [

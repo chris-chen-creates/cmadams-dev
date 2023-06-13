@@ -7,6 +7,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import MastHead from '../components/MastHead.astro'
+import { FiArrowRight } from 'react-icons/fi'
+import {
+  SiReact,
+  SiTypescript,
+  SiKotlin,
+  SiAstro,
+  SiRust,
+  SiGithub,
+  SiAbletonlive,
+  SiAdobecreativecloud,
+  SiMysql,
+  SiVim
+} from 'react-icons/si'
 
 const posts = (await Astro.glob('./posts/*.md')).sort(
   (a: any, b: any) =>
@@ -35,44 +48,226 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
           alt="an image of christian adams"
         />
       </div>
-      <h1
-        class="font-spaceMono underline-offset-2 underline font-bold text-center"
-      >
-        I'm Christian Adams
-      </h1>
       <Content>
         <section>
-          <p class="mb-8 indent-4">
-            I'm a creator at my core. I build software. I write, produce, and
-            perform music as food4ghosts. I make visual art. I use my creativity
-            in any way I can personally and professionally. I am a highly self
-            motivated and persistent learner. I truly believe that if I put in
-            the hard work, I can achieve anything. I believe that anyone can.
+          <h1 class="font-spaceMono font-bold text-xl mb-1">About Me</h1>
+          <p class="indent-4 mb-2">
+            Hi, I'm Christian! I'm a creative by life and a software maker by
+            trade. I'm based out of St. Louis, Missouri, land of the <a
+              href="https://oldviennallc.com/product/red-hot-riplets/"
+              target="_blank"
+              class="font-spaceMono font-semibold underline underline-offset-2dark:text-red-500 text-red-700 hover:text-red-300"
+              >Red Hot Riplets</a
+            >. I have a passion for learning new things and that led me into a
+            career where I constantly run into new problems that can only be
+            solved by furthering my knowledge and skills. When I'm not working,
+            you can find me writing, producing and performing electronic music
+            as <a
+              href="https://soundcloud.com/food4ghosts"
+              target="_blank"
+              class="font-spaceMono font-semibold underline underline-offset-2 dark:text-emerald-400 text-emerald-700 hover:text-emerald-900 hover:dark:text-emerald-100"
+              >food4ghosts</a
+            >. This website is also my experimental playground so expect things
+            to move around often (and maybe even a crash here or there 🔥).
           </p>
+          <a
+            href="/blog"
+            class="mb-4 inline-flex items-center font-spaceMono font-semibold dark:text-blue-400 text-blue-700 hover:dark:text-blue-200 hover:text-blue-400"
+            >Check out my Blog for some of my thoughts<FiArrowRight /></a
+          >
+          <!-- <br />
+          <a
+            href="/gear"
+            class="mb-4 inline-flex items-center font-spaceMono font-semibold dark:text-amber-400 hover:dark:text-amber-200 text-amber-700 hover:text-amber-400"
+            >Check out some of the Gear I use<FiArrowRight /></a
+          > -->
         </section>
+
         <section>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h1 class="font-spaceMono font-bold text-xl mb-1">History</h1>
+          <ul class="mb-4">
+            <li>
+              <a class="font-spaceMono font-semibold">1992</a><a class="pl-4"
+                >Born in Detroit, Michigan</a
+              >
+            </li>
+            <li>
+              <a class="font-spaceMono font-semibold">2010</a><a class="pl-4"
+                >Moved to Fairbanks, Alaska and attended University of Alaska
+                Fairbanks</a
+              >
+            </li>
+            <li>
+              <a class="font-spaceMono font-semibold">2015</a><a class="pl-4"
+                >Moved to St. Louis, Missouri and worked for Recreational
+                Equipment Inc.</a
+              >
+            </li>
+            <li>
+              <a class="font-spaceMono font-semibold">2018</a><a class="pl-4"
+                >Started working at Cash App</a
+              >
+            </li>
+            <li>
+              <a class="font-spaceMono font-semibold">Now</a><a class="pl-5"
+              ></a>Working at Cash App as a software engineer
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h1 class="font-spaceMono font-bold text-xl mb-1">What I Do</h1>
+          <ul class="mb-4">
+            <li>💻 Build software to help solve complex problems</li>
+            <li>🎨 Design UIs to be used by large operations teams</li>
+            <li>🎹 Write, produce, and perform music</li>
+            <li>💡 Learn new skills and technologies</li>
+            <li>📓 Teach programming and share knowledge with others</li>
+            <li>📚 Read non-fiction, sci-fi, and fantasy books</li>
+            <li>🌎 Travel far and wide</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1 class="font-spaceMono font-bold text-xl mb-2">
+            Technologies I Use
+          </h1>
+          <ul class="inline-flex items-center gap-2 text-4xl mb-4">
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://react.dev/"
+                target="_blank"><SiReact /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://www.typescriptlang.org/"
+                target="_blank"><SiTypescript /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://kotlinlang.org/"
+                target="_blank"><SiKotlin /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://www.mysql.com/"
+                target="_blank"><SiMysql /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://astro.build/"
+                target="_blank"><SiAstro /></a
+              >
+            </li>
+            <a
+              class="hover:dark:text-emerald-400 hover:text-emerald-600"
+              href="https://www.rust-lang.org/"
+              target="_blank"><SiRust /></a
+            >
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://www.vim.org/"
+                target="_blank"><SiVim /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://github.com/"
+                target="_blank"><SiGithub /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-400 hover:text-emerald-600"
+                href="https://www.ableton.com/"
+                target="_blank"><SiAbletonlive /></a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:dark:text-emerald-300 hover:text-emerald-600"
+                href="https://www.adobe.com/"
+                target="
+              _blank"><SiAdobecreativecloud /></a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h1 class="font-spaceMono font-bold text-xl mb-1">
+            What I've Been Listening To
+          </h1>
+          <iframe
+            class="mb-4"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1EphU0toUI8Z50?utm_source=generator"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </section>
+
+        <section>
+          <h1 class="font-spaceMono font-bold text-xl mb-1">My Latest Posts</h1>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {
-              posts.map(post => (
-                <li class="text-center mb-4">
-                  <a href={post.url}>
-                    <Image
+              (
+                <li class="text-center">
+                  <a href={posts[0].url}>
+                    <img
                       class="border border-slate-400 dark:border-zinc-400 rounded-xl"
-                      src={post.frontmatter.heroImage}
-                      width={720 * 2}
-                      aspectRatio={2.0}
-                      alt="post thumbnail"
+                      src={posts[0].frontmatter.heroImage}
+                      width={360 * 2}
+                      alt="Thumbnail"
                     />
-                    <div class="mt-3 text-xl">{post.frontmatter.title}</div>
-                    <div class="opacity-70">{post.frontmatter.description}</div>
+                    <div class="mt-3 text-xl">{posts[0].frontmatter.title}</div>
+                    {posts[0].frontmatter.description && (
+                      <div class="opacity-70">
+                        {posts[0].frontmatter.description}
+                      </div>
+                    )}
                   </a>
                 </li>
-              ))
+              )
+            }
+            {
+              (
+                <li class="text-center">
+                  <a href={posts[1].url}>
+                    <img
+                      class="border border-slate-400 dark:border-zinc-400 rounded-xl"
+                      src={posts[1].frontmatter.heroImage}
+                      width={360 * 2}
+                      alt="Thumbnail"
+                    />
+                    <div class="mt-3 text-xl">{posts[1].frontmatter.title}</div>
+                    {posts[1].frontmatter.description && (
+                      <div class="opacity-70">
+                        {posts[1].frontmatter.description}
+                      </div>
+                    )}
+                  </a>
+                </li>
+              )
             }
           </ul>
         </section>
       </Content>
     </main>
-    <Footer />
   </Body>
+  <Footer />
 </html>

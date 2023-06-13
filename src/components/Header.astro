@@ -1,13 +1,37 @@
 ---
 import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
-import { IoLogoGithub, IoHome, IoBook } from 'react-icons/io5'
+import { IoLogoGithub, IoHome, IoBook, IoLogoLinkedin } from 'react-icons/io5'
 import { TbGhost } from 'react-icons/tb'
 import { FaCog } from 'react-icons/fa'
 import ThemeToggleButton from './ThemeToggleButton'
+import DropdownMenu from './DropdownMenu'
+
+const menuItems = [
+  {
+    name: 'Home',
+    url: '/'
+  },
+  {
+    name: 'Blog',
+    url: '/blog'
+  },
+  {
+    name: 'Github',
+    url: 'https://github.com/chris-chen-creates',
+    target: '_blank'
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/adamschristian/',
+    target: '_blank'
+  }
+]
 ---
 
-<header class="fixed w-full p-2 z-20 backdrop-blur-md">
+<header
+  class="fixed w-full p-2 z-20 dark:backdrop-blur-md bg-zinc-100 dark:bg-transparent"
+>
   <div class="mx-auto max-w-3xl">
     <nav class="flex items-center gap-3 text-base">
       <a href="/" class="text-3xl dark:text-emerald-400 text-rose-500">
@@ -19,18 +43,42 @@ import ThemeToggleButton from './ThemeToggleButton'
         </h2>
       </a>
       <div class="items-center gap-6 font-spaceMono hidden md:flex">
-        <HeaderLink href="/"><IoHome />Home</HeaderLink>
-        <HeaderLink href="/blog"><IoBook />Blog</HeaderLink>
-        <HeaderLink href="/gear"><FaCog />Gear</HeaderLink>
         <HeaderLink
+          class="dark:hover:text-emerald-400 hover:text-rose-500"
+          href="/"
+        >
+          <IoHome />Home
+        </HeaderLink>
+        <HeaderLink
+          class="dark:hover:text-emerald-400 hover:text-rose-500"
+          href="/blog"
+        >
+          <IoBook />Blog
+        </HeaderLink>
+        <!-- <HeaderLink
+          class="dark:hover:text-emerald-400 hover:text-rose-500"
+          href="/gear"
+        >
+          <FaCog />Gear
+        </HeaderLink> -->
+        <HeaderLink
+          class="dark:hover:text-emerald-400 hover:text-rose-500"
           href="https://github.com/chris-chen-creates"
           target="_blank"
         >
           <IoLogoGithub />Github
         </HeaderLink>
+        <HeaderLink
+          class="dark:hover:text-emerald-400 hover:text-rose-500"
+          href="https://www.linkedin.com/in/adamschristian/"
+          target="_blank"
+        >
+          <IoLogoLinkedin />Linkedin
+        </HeaderLink>
       </div>
       <div class="flex-1"></div>
-      <ThemeToggleButton client:load />
+      <DropdownMenu items={menuItems} client:visible />
+      <ThemeToggleButton client:visible />
     </nav>
   </div>
 </header>

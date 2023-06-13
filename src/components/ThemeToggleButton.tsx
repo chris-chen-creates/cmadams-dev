@@ -37,7 +37,7 @@ export default function ThemeToggle() {
   }, [])
 
   return isMounted ? (
-    <div className="inline-flex items-center p-[1px] rounded-3xl bg-purple-400 dark:bg-slate-500">
+    <div className="inline-flex items-center p-[1px] rounded-3xl bg-amber-300 dark:bg-slate-500">
       {themes.map(t => {
         const checked = t === theme
         return (
