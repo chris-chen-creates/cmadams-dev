@@ -70,11 +70,11 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             >. This website is also my experimental playground so expect things
             to move around often (and maybe even a crash here or there 🔥).
           </p>
-          <a
+          <!-- <a
             href="/blog"
             class="mb-4 inline-flex items-center font-spaceMono font-semibold dark:text-blue-400 text-blue-700 hover:dark:text-blue-200 hover:text-blue-400"
             >Check out my Blog for some of my thoughts<FiArrowRight /></a
-          >
+          > -->
           <!-- <br />
           <a
             href="/gear"
@@ -221,7 +221,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             loading="lazy"></iframe>
         </section>
 
-        <section>
+        <!-- <section>
           <h1 class="font-spaceMono font-bold text-xl mb-1">My Latest Posts</h1>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {
@@ -265,7 +265,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
               )
             }
           </ul>
-        </section>
+        </section> -->
       </Content>
     </main>
   </Body>
