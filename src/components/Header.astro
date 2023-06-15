@@ -3,7 +3,6 @@ import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 import { IoLogoGithub, IoHome, IoBook, IoLogoLinkedin } from 'react-icons/io5'
 import { TbGhost } from 'react-icons/tb'
-import { FaCog } from 'react-icons/fa'
 import ThemeToggleButton from './ThemeToggleButton'
 import DropdownMenu from './DropdownMenu'
 
@@ -12,10 +11,10 @@ const menuItems = [
     name: 'Home',
     url: '/'
   },
-  // {
-  //   name: 'Blog',
-  //   url: '/blog'
-  // },
+  {
+    name: 'Blog',
+    url: '/blog'
+  },
   {
     name: 'Github',
     url: 'https://github.com/chris-chen-creates',
@@ -49,18 +48,12 @@ const menuItems = [
         >
           <IoHome />Home
         </HeaderLink>
-        <!-- <HeaderLink
+        <HeaderLink
           class="dark:hover:text-emerald-400 hover:text-rose-500"
           href="/blog"
         >
           <IoBook />Blog
-        </HeaderLink> -->
-        <!-- <HeaderLink
-          class="dark:hover:text-emerald-400 hover:text-rose-500"
-          href="/gear"
-        >
-          <FaCog />Gear
-        </HeaderLink> -->
+        </HeaderLink>
         <HeaderLink
           class="dark:hover:text-emerald-400 hover:text-rose-500"
           href="https://github.com/chris-chen-creates"
