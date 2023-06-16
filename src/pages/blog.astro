@@ -21,12 +21,12 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
   </head>
   <Body>
     <Header title={SITE_TITLE} />
-    <main class="pt-[56px]">
+    <main class="pt-[56px] pb-96">
       <Content className="mt-12">
         <h1 class="text-3xl font-bold font-spaceMono mb-4">
           Some Thoughts and Writings
         </h1>
-        <section>
+        <section class="pb-96">
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {
               posts.map(post => (
@@ -54,6 +54,6 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
         </section>
       </Content>
     </main>
-    <Footer />
   </Body>
+  <Footer />
 </html>

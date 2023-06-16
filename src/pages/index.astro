@@ -35,7 +35,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
   </head>
   <Body>
     <Header title={SITE_TITLE} />
-    <main class="pt-[56px]">
+    <main class="pt-[56px] pb-96">
       <MastHead />
       <div class="flex justify-center">
         <Image
@@ -215,7 +215,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             loading="lazy"></iframe>
         </section>
 
-        <section>
+        <section class="pb-20">
           <h1 class="font-spaceMono font-bold text-xl mb-1">My Latest Posts</h1>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {
@@ -228,9 +228,11 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
                       width={360 * 2}
                       alt="Thumbnail"
                     />
-                    <div class="mt-3 text-xl">{posts[0].frontmatter.title}</div>
+                    <div class="mt-3 text-xl font-bold">
+                      {posts[0].frontmatter.title}
+                    </div>
                     {posts[0].frontmatter.description && (
-                      <div class="opacity-70">
+                      <div class="opacity-70 font-bold text-md">
                         {posts[0].frontmatter.description}
                       </div>
                     )}
@@ -248,9 +250,11 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
                       width={360 * 2}
                       alt="Thumbnail"
                     />
-                    <div class="mt-3 text-xl">{posts[1].frontmatter.title}</div>
+                    <div class="mt-3 text-xl font-bold">
+                      {posts[1].frontmatter.title}
+                    </div>
                     {posts[1].frontmatter.description && (
-                      <div class="opacity-70">
+                      <div class="opacity-70 font-bold text-md">
                         {posts[1].frontmatter.description}
                       </div>
                     )}
