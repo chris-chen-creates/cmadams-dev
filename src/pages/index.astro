@@ -70,12 +70,11 @@ const posts = (await Astro.glob('./blog/*.md')).sort(
             >. This website is also my experimental playground so expect things
             to move around often (and maybe even a crash here or there 🔥).
           </p>
-          <!-- Temporarily removing blog -->
-          <!-- <a
+          <a
             href="/blog"
             class="mb-4 inline-flex items-center font-spaceMono font-semibold dark:text-blue-400 text-blue-700 hover:dark:text-blue-200 hover:text-blue-400"
             >Check out my Blog for some of my thoughts<FiArrowRight /></a
-          > -->
+          >
         </section>
 
         <section>
@@ -127,7 +126,7 @@ const posts = (await Astro.glob('./blog/*.md')).sort(
           <h1 class="font-spaceMono font-bold text-xl mb-2">
             Technologies I Use
           </h1>
-          <ul class="inline-flex items-center gap-2 text-4xl mb-4">
+          <ul class="flex flex-wrap items-center gap-2 text-4xl mb-4">
             <li>
               <a
                 class="hover:dark:text-emerald-400 hover:text-emerald-600"
@@ -200,11 +199,12 @@ const posts = (await Astro.glob('./blog/*.md')).sort(
           </ul>
         </section>
 
-        <section class="pb-44">
+        <section>
           <h1 class="font-spaceMono font-bold text-xl mb-1">
             What I've Been Listening To
           </h1>
           <iframe
+            class="mb-4"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/playlist/37i9dQZF1EphU0toUI8Z50?utm_source=generator"
             width="100%"
@@ -215,8 +215,7 @@ const posts = (await Astro.glob('./blog/*.md')).sort(
             loading="lazy"></iframe>
         </section>
 
-        <!-- Temporarily removing blog -->
-        <!-- <section class="pb-20">
+        <section class="pb-40">
           <h1 class="font-spaceMono font-bold text-xl mb-1">My Latest Posts</h1>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {
@@ -264,7 +263,7 @@ const posts = (await Astro.glob('./blog/*.md')).sort(
               )
             }
           </ul>
-        </section> -->
+        </section>
       </Content>
     </main>
   </Body>
