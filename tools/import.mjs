@@ -10,7 +10,7 @@ const liveExport = new LiveExporter({
   port: Number(INKDROP_PORT)
 })
 
-const basePath = `./src/pages/posts`
+const basePath = `./src/pages/blog`
 const publicPath = `./public/posts`
 
 await liveExport.start({

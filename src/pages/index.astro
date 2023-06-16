@@ -7,7 +7,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import MastHead from '../components/MastHead.astro'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi/index.js'
 import {
   SiReact,
   SiTypescript,
@@ -19,9 +19,9 @@ import {
   SiAdobecreativecloud,
   SiMysql,
   SiVim
-} from 'react-icons/si'
+} from 'react-icons/si/index.js'
 
-const posts = (await Astro.glob('./posts/*.md')).sort(
+const posts = (await Astro.glob('./blog/*.md')).sort(
   (a: any, b: any) =>
     new Date(b.frontmatter.createdAt).valueOf() -
     new Date(a.frontmatter.createdAt).valueOf()
@@ -70,11 +70,12 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             >. This website is also my experimental playground so expect things
             to move around often (and maybe even a crash here or there 🔥).
           </p>
-          <a
+          <!-- Temporarily removing blog -->
+          <!-- <a
             href="/blog"
             class="mb-4 inline-flex items-center font-spaceMono font-semibold dark:text-blue-400 text-blue-700 hover:dark:text-blue-200 hover:text-blue-400"
             >Check out my Blog for some of my thoughts<FiArrowRight /></a
-          >
+          > -->
         </section>
 
         <section>
@@ -199,12 +200,11 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
           </ul>
         </section>
 
-        <section>
+        <section class="pb-44">
           <h1 class="font-spaceMono font-bold text-xl mb-1">
             What I've Been Listening To
           </h1>
           <iframe
-            class="mb-4"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/playlist/37i9dQZF1EphU0toUI8Z50?utm_source=generator"
             width="100%"
@@ -215,7 +215,8 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             loading="lazy"></iframe>
         </section>
 
-        <section class="pb-20">
+        <!-- Temporarily removing blog -->
+        <!-- <section class="pb-20">
           <h1 class="font-spaceMono font-bold text-xl mb-1">My Latest Posts</h1>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {
@@ -263,7 +264,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
               )
             }
           </ul>
-        </section>
+        </section> -->
       </Content>
     </main>
   </Body>
