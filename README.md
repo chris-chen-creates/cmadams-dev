@@ -1,6 +1,6 @@
 **Here's a blog post I made going over the new site and the recipe**
 
-![sunrise-scifi](https://github.com/chris-chen-creates/cmadams-dev/assets/34226032/08747cc3-9ea8-472b-9830-837fe3566bfa)
+![sunrise-scifi](https://github.com/chris-chen-creates/cmadams-dev/assets/34226032/ba61f487-db0a-4190-8bea-5b1160e79bc3)
 
 # Wowza! A new site!
 
@@ -20,11 +20,11 @@ With a bit of research on the technologies out there right now, I came up with t
 - Inkdrop as a Content Management System (CMS)
 - Neocities to host it all
 
-![inkdrop_eyecatch](https://github.com/chris-chen-creates/cmadams-dev/assets/34226032/435c864b-96f5-4f18-8813-f8788d08a20b)
 
 ### Inspiration and CMS
+![inkdrop_eyecatch](https://github.com/chris-chen-creates/cmadams-dev/assets/34226032/26517689-6bc4-48ae-9d73-9fbd4147bfd1)
 
-![inkdrop_eyecatch](inkdrop://file:vJNB3h0C8)
+
 I also got inspired by looking at some other profile sites out there. One notable is [Takuya Matuyama](https://www.craftz.dog/) who has a fantastic, beautiful Youtube channel called [devaslife](https://www.youtube.com/devaslife). I really enjoyed the layout of his site and he had a great video going over the setup. I've been using the note taking app [Inkdrop](https://www.inkdrop.app/) that he built for a few months now. It's honestly been my favorite out of all of them out there because it doesn't try to do too much. I find that it's the food truck of note apps, small menu but it does all of it super well. So with Inkdrop Takuya showed that you can use it as a CMS and create a live-import tool to pull in notebooks (how groups of notes are organized). So I could easily write my posts, run the live-import tool and all the posts would be pulled into the website, parsed, and Astro would covert them into individual pages. It's rad!
 
 ## Framework
